@@ -1,4 +1,4 @@
-import Markup from "./components/Markup/Markup";
+import Markup from "./Markup/Markup";
 
 export function App() {
   return (
