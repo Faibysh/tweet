@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import styles from "./Card.module.css";
+import vector from "../../assets/images/vector.svg";
+import rectangle from "../../assets/images/rectangle.svg";
+import decoration from "../../assets/images/decoration.png";
+import avengers from "../../assets/images/avengers.png";
 
 export default function Card({ following, userData, onToggleFollow }) {
   const [followersCount, setFollowersCount] = useState(
@@ -32,22 +36,10 @@ export default function Card({ following, userData, onToggleFollow }) {
     <div className={styles.card}>
       {userData && (
         <>
-          <img
-            className={styles.logo}
-            src="../../../public/images/vector.svg"
-            alt="logo"
-          />
-          <img
-            className={styles.decor}
-            src="../../../public/decoration.png"
-            alt="decoration"
-          />
-          <img className={styles.avatar} src={userData.avatar} alt="avatar" />
-          <img
-            className={styles.rectangle}
-            src="../../../public/images/rectangle.svg"
-            alt="rectangle"
-          />
+          <img className={styles.logo} src={vector} alt="logo" />
+          <img className={styles.decor} src={decoration} alt="decoration" />
+          <img className={styles.avatar} src={avengers} alt="avatar" />
+          <img className={styles.rectangle} src={rectangle} alt="rectangle" />
           <div className={styles.bottom}>
             <p className={styles.name}> {userData.user}</p>
             <p className={styles.paragraph}> {userData.paragraph}</p>
